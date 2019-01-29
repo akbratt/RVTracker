@@ -124,9 +124,6 @@ def open_nii(volpaths, segpaths, ind, num, in_z, out_z, center_crop_sz,\
                 nascent_seg_series = \
                         np.expand_dims(nascent_seg_series, axis=0)
 
-        # for s in nascent_seg_series:
-            # print(np.max(s))
-            # print(isinstance(np.max(s), np.int))
         if txforms is not None:
             for j in txforms:
                 nascent_series, nascent_seg_series = \

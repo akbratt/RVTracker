@@ -26,7 +26,6 @@ def seg2mask(seg, num_labels):
     colors = np.array([[1,0,0], [0,1,0], [0,0,1]])
     for i in np.arange(1,num_labels):
         r_mask = np.where(np.expand_dims(seg, -1)==i,colors[i-1],r_mask)
-        # r_mask[:,:,i][np.where(seg==i)] = 1
     return r_mask
 
 def makeMask(vol, seg, num_labels, alpha):
