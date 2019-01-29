@@ -6,12 +6,8 @@ import transforms
 import torch
 import re
 import nrrd
-# import time
-# import matplotlib.pyplot as plt
 
-path = "/home/alex/LiverSegmentation/img/"
-
-# Rotates and flips images becaus the .nii volumes load flipped and rotated
+# Rotates and flips images becaus the .nii volumes
 def rot_and_flip(img):
     img = np.rot90(img, axes=(-2, -1))
     img = np.flip(img, -1)
